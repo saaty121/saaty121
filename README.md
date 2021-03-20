@@ -55,18 +55,18 @@ var sylotiGlyphs = [
  * Handle Nagri Inputs.
  */
 nagri.addEventListener("keyup", function (e) {
-  var banglaChars = "";
+  var sylotiGlyphs = "";
 
   var str = this.value;
   for (var i = 0; i < str.length; i++) {
-    for (var key in banglaGlyphs) {
-      // console.warn(str[i], " - ", typeof banglaGlyphs[key][str[i]]);
-      if ("undefined" !== typeof banglaGlyphs[key][str[i]]) {
-        banglaChars += banglaGlyphs[key][str[i]];
+    for (var key in sylotiGlyphs) {
+      // console.warn(str[i], " - ", typeof sylotiGlyphs[key][str[i]]);
+      if ("undefined" !== typeof sylotiGlyphs[key][str[i]]) {
+        sylotiGlyphs += sylotiGlyphs[key][str[i]];
       } else {
-        banglaChars += str[i];
+        sylotiGlyphs += str[i];
       }
     }
   }
-  bangla.value = banglaChars;
+  syloti.value = sylotiGlyphs;
 });
